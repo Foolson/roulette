@@ -16,6 +16,7 @@ int main()
 	bool   even_number;
 	string winning_color;
 	double price;
+	int    number;
 	
 	cout << "Welcome to a new game of Roulette!" << endl;
 	account = account + 1000;
@@ -78,7 +79,7 @@ int main()
 		}
 		
 		srand(time(NULL));
-		random_number = rand() % 36 +1;
+		random_number = rand() % 36 + 1;
 		if(random_number % 2 == 0)
 		{
 			winning_color="black";
@@ -106,7 +107,36 @@ int main()
 	}
 	else
 	{
-		
+		cout << "Pick a number 1-36:" << endl;
+		while(cin >> number)
+		{
+			if(number >= 1 &&  number <= 36)
+			{
+				break;
+			}
+			else
+			{
+				cout << "Not a correct input!" << endl;
+			}
+		}
+
+		srand(time(NULL));
+		random_number = rand() % 36 + 1;
+		if(random_number==number)
+		{
+			price = bet * 10;
+			account = account + price + bet;
+			bank = bank - bet;
+
+			cout << "Winning number: " << random_number << endl;
+			cout << "You Won!" << endl;
+			cout << "A total of " << price << "sek in price money has been moved to your account and your " << bet << "sek bet is back as well." << endl; 
+		}
+		else
+		{
+			cout << "Winning number: " << random_number << endl;
+			cout << "You lost!" << endl;
+		}
 	}
 	
 }
