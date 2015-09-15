@@ -5,6 +5,7 @@
 using namespace std;
 
 int main() {
+
 	double bank;
 	double account;
 	int    bet;
@@ -24,4 +25,5 @@ int main() {
 			cout << "Not a correct input!" << endl;
 		}
 	}
+
 }
