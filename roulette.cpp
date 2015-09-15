@@ -9,7 +9,7 @@ int main() {
 	int    bet;
 	
 	cout << "Welcome to a new game of Roulette!" << endl;
-	account = 1000;
+	account = account + 1000;
 	cout << "You have " << account << "sek in your account."  << endl;
 	cout << "New bet!" << endl;
 	cout << "Please bet 100, 300 or 500sek." << endl;
