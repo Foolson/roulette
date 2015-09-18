@@ -25,7 +25,7 @@ int main()
     {
     
         cout << "Welcome to a new game of Roulette!" << endl;
-        account = account + 1000;
+        account = 1000;
 
         while(1)
         {
@@ -197,11 +197,34 @@ int main()
                         }
                      }
                 }
+                else
+                {
+                    cout << "You are out of credit!" << endl;
+                    new_bet = "no"
+                }
             }
             if(new_bet == "no")
             {
                 break;
             } 
+        }
+        while(1)
+        {
+            cout << "Do you want to play a new game?" << endl;
+            cout << "yes/no: ";
+            cin  >> new_game;
+            if(new_bet == "yes" || new_bet == "no")
+            {
+                break;
+            }
+            else
+            {
+                cout << "Not a correct input!" << endl;
+            }
+        }
+        if(new_game == "no")
+        {
+            break;
         }
     }
 }
