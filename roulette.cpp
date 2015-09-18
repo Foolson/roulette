@@ -53,7 +53,6 @@ int main()
             
             //Bet moved from account to bank
             account = account - bet;
-            bank = bank + bet;
             
             //Player chooses if they want to bet on a color or a number
             cout << "Bet on a color or a number:" << endl;
@@ -147,7 +146,6 @@ int main()
                 {   //Price money is calculated and price + bet money is transfered to the players account
                     price = bet * 10;
                     account = account + price + bet;
-                    bank = bank - bet;
                     
                     //The winning number is declared and the player and that tey won, they also get to know how much they have won
                     cout << "Winning number: " << random_number << endl;
