@@ -110,7 +110,7 @@ int main()
                     //The winning color is declared for the player and that they won, they also get to know how much they have won
                     cout << "Winning color: " << winning_color << endl;
                     cout << "You won!" << endl;
-                    cout << "A total of " << price << "sek in price money has been moved to your account and your " << bet << "sek bet is back as well." << endl;
+                    cout << "A total of " << price << "sek in price money has been moved to your account" << endl;
 
                     won_bet = true;
                 }
@@ -143,14 +143,13 @@ int main()
                 //If the random number is the same as the number the player picked they will win
                 if(random_number==number)
                 {   //Price money is calculated and price + bet money is transfered to the players account
-                    price = bet * 10;
+                    price = bet * 2 + bet;
                     account = account + price;
-                    account = account + bet;
                     
                     //The winning number is declared and the player and that tey won, they also get to know how much they have won
                     cout << "Winning number: " << random_number << endl;
                     cout << "You Won!" << endl;
-                    cout << "A total of " << price << "sek in price money has been moved to your account and your " << bet << "sek bet is back as well." << endl;
+                    cout << "A total of " << price << "sek in price money has been moved to your account" << endl;
 
                     won_bet = true;
                 }
@@ -197,11 +196,11 @@ int main()
                             cout << "Not a correct input!" << endl;
                         }
                      }
-                     if(new_bet == "no")
-                     {
-                        break;
-                     }
                 }
+            }
+            if(new_bet == "no")
+            {
+                break;
             } 
         }
     }
