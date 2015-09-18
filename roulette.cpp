@@ -33,11 +33,13 @@ int main()
             cout << "You have " << account << "sek in your account."  << endl;
         
             cout << "New bet!" << endl;
-            cout << "Please bet 100, 300 or 500sek:" << endl;
             
             //User gets to input bet    
-            while(cin >> bet) 
-            {   //only these three is accepted, letters will make the program crash and i dont know why
+            while(1) 
+            {   
+                cout << "How much do you want to bet?" << endl;
+                cout << "100/300/500: " << endl;
+                cin  >> bet;
                 if(bet==100 && bet<=account ||
                    bet==300 && bet<=account ||
                    bet==500 && bet<=account  ) 
@@ -53,12 +55,12 @@ int main()
             
             //Bet moved from account to bank
             account = account - bet;
-            
-            //Player chooses if they want to bet on a color or a number
-            cout << "Bet on a color or a number:" << endl;
-            while(cin >> color_number) 
+
+            while(1) 
             {
-                //Same as in the bet part, ony these two inputs are accepted    
+                cout << "What do you want to bet on?" << endl;
+                cout << "color/number: " << endl;
+                cin  >> number;
                 if(color_number=="color"  ||
                    color_number=="number"  ) 
                 {
@@ -74,10 +76,12 @@ int main()
             //At this place a split begins in the program, color or number
             //The first one is the color part
             if(color_number=="color")
-            {   //Player picks color
-                cout << "Pick red or black:" << endl;
-                while(cin >> color)
-                {   //Only "red" and "black" are accepted inputs, same method as the other inputs
+            {   
+                while(1)
+                {   
+                    cout << "Which color do you want to bet on?" << endl;
+                    cout << "red/black: " << endl;
+                    cin  >> color;
                     if(color=="red"   ||
                        color=="black"  )
                     {
@@ -125,9 +129,11 @@ int main()
             //The number part of the split begins here
             else
             {   //The player picks a number between 1-36
-                cout << "Pick a number 1-36:" << endl;
-                while(cin >> number)
-                {   //Only a number between 1-36 is accepted. Numbers greater than or equal to 1 or numbers lesser or equal to 36
+                while(1)
+                {   
+                    cout << "Which number do you want to bet on?" << endl;
+                    cout << "1-36: " << endl;
+                    cin  >> number;
                     if(number >= 1 &&  number <= 36)
                     {
                         break;
@@ -199,7 +205,7 @@ int main()
                 }
                 else
                 {
-                    cout << "You are out of credit!" << endl;
+                    cout << "You are out of money!" << endl;
                     new_bet = "no";
                 }
             }
