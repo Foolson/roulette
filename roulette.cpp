@@ -52,9 +52,6 @@ int main()
                     cout << "Not a correct input!" << endl; 
                 }
             }
-            
-            //Bet moved from account to bank
-            account - bet;
 
             while(1) 
             {
