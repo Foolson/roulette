@@ -26,11 +26,12 @@ int main()
     
         cout << "Welcome to a new game of Roulette!" << endl;
         account = account + 1000;
-        
-        cout << "You have " << account << "sek in your account."  << endl;
-        
+
         while(1)
         {
+        
+            cout << "You have " << account << "sek in your account."  << endl;
+        
             cout << "New bet!" << endl;
             cout << "Please bet 100, 300 or 500sek:" << endl;
             
