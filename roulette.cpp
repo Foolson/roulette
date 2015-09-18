@@ -60,7 +60,7 @@ int main()
             {
                 cout << "What do you want to bet on?" << endl;
                 cout << "color/number: ";
-                cin  >> number;
+                cin  >> color_number;
                 if(color_number=="color"  ||
                    color_number=="number"  ) 
                 {
