@@ -54,7 +54,7 @@ int main()
             }
             
             //Bet moved from account to bank
-            account = account - bet;
+            account - bet;
 
             while(1) 
             {
