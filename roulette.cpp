@@ -104,9 +104,8 @@ int main()
                 //If the players color matches the winning color defined above the player will win
                 if(color==winning_color)
                 {   //Price money is calculated and the price money + bet money is moved to the players account
-                    price = bet * 2;
+                    price = bet * 2 + bet;
                     account = account + price;
-                    account = account + bet;
                     
                     //The winning color is declared for the player and that they won, they also get to know how much they have won
                     cout << "Winning color: " << winning_color << endl;
