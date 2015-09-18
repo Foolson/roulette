@@ -168,7 +168,7 @@ int main()
                 while(1)
                 {
                     cout << "Do you want to play a new bet?" << endl;
-                    cout << "yes/no: "
+                    cout << "yes/no: ";
                     cin  >> new_bet;
                     if(new_bet == "yes" || new_bet == "no")
                     {
@@ -187,7 +187,7 @@ int main()
                     while(1)
                     {
                         cout << "Do you want to play a new bet?" << endl;
-                        cout << "yes/no: "
+                        cout << "yes/no: ";
                         cin  >> new_bet;
                         if(new_bet == "yes" || new_bet == "no")
                         {
