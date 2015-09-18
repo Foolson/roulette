@@ -17,9 +17,9 @@ int main()
     string winning_color;
     int    price;
     int    number;
-    bool   won_bet
-    string new_bet
-    string new_game
+    bool   won_bet;
+    string new_bet;
+    string new_game;
 
     while(1)
     {
