@@ -38,7 +38,7 @@ int main()
             while(1) 
             {   
                 cout << "How much do you want to bet?" << endl;
-                cout << "100/300/500: " << endl;
+                cout << "100/300/500: ";
                 cin  >> bet;
                 if(bet==100 && bet<=account ||
                    bet==300 && bet<=account ||
@@ -59,7 +59,7 @@ int main()
             while(1) 
             {
                 cout << "What do you want to bet on?" << endl;
-                cout << "color/number: " << endl;
+                cout << "color/number: ";
                 cin  >> number;
                 if(color_number=="color"  ||
                    color_number=="number"  ) 
@@ -80,7 +80,7 @@ int main()
                 while(1)
                 {   
                     cout << "Which color do you want to bet on?" << endl;
-                    cout << "red/black: " << endl;
+                    cout << "red/black: ";
                     cin  >> color;
                     if(color=="red"   ||
                        color=="black"  )
@@ -132,7 +132,7 @@ int main()
                 while(1)
                 {   
                     cout << "Which number do you want to bet on?" << endl;
-                    cout << "1-36: " << endl;
+                    cout << "1-36: ";
                     cin  >> number;
                     if(number >= 1 &&  number <= 36)
                     {
