@@ -199,7 +199,7 @@ int main()
                         {
                             cout << "Not a correct input!" << endl;
                         }
-                     }
+                    }
                 }
                 else
                 {
