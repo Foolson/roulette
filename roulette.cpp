@@ -186,6 +186,7 @@ int main()
             }
             else
             {
+                account = account - bet;
                 if(account >= 100)
                 {
                     while(1)
