@@ -200,7 +200,7 @@ int main()
                 else
                 {
                     cout << "You are out of credit!" << endl;
-                    new_bet = "no"
+                    new_bet = "no";
                 }
             }
             if(new_bet == "no")
