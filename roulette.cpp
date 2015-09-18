@@ -105,8 +105,8 @@ int main()
                 if(color==winning_color)
                 {   //Price money is calculated and the price money + bet money is moved to the players account
                     price = bet * 2;
-                    account = account + price + bet;
-                    bank = bank - bet;
+                    account = account + price;
+                    account = account + bet;
                     
                     //The winning color is declared for the player and that they won, they also get to know how much they have won
                     cout << "Winning color: " << winning_color << endl;
@@ -145,7 +145,8 @@ int main()
                 if(random_number==number)
                 {   //Price money is calculated and price + bet money is transfered to the players account
                     price = bet * 10;
-                    account = account + price + bet;
+                    account = account + price;
+                    account = account + bet;
                     
                     //The winning number is declared and the player and that tey won, they also get to know how much they have won
                     cout << "Winning number: " << random_number << endl;
