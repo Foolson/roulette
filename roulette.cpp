@@ -111,7 +111,8 @@ int main()
                 
                 //If the players color matches the winning color defined above the player will win
                 if(color==winning_color)
-                {   //Price money is calculated and the price money + bet money is moved to the players account
+                {   
+                    //Price money is calculated and the price money + bet money is moved to the players account
                     price = bet * 2;
                     price = price + bet;
                     account = account + price;
@@ -124,12 +125,14 @@ int main()
                     won_bet = true;
                 }
                 else
-                {   //The winning color is declared for the player and that they have lost
+                {   
+                    //The winning color is declared for the player and that they have lost
                     cout << "Winning color: " << winning_color << endl;
                     cout << "You lost!" << endl;
 
                     won_bet = false;
                 }
+
             }
 
             //The number part of the split begins here
@@ -155,9 +158,11 @@ int main()
                 //A number between 1-36 is randomly generated
                 srand(time(NULL));
                 random_number = rand() % 36 + 1;
+
                 //If the random number is the same as the number the player picked they will win
                 if(random_number==number)
-                {   //Price money is calculated and price + bet money is transfered to the players account
+                {   
+                    //Price money is calculated and price + bet money is transfered to the players account
                     price = bet * 10;
                     price = price + bet;
                     account = account + price;
@@ -170,7 +175,8 @@ int main()
                     won_bet = true;
                 }
                 else
-                {   //The winning number is declared for the player and that they have lost
+                {   
+                    //The winning number is declared for the player and that they have lost
                     cout << "Winning number: " << random_number << endl;
                     cout << "You lost!" << endl;
 
@@ -187,6 +193,7 @@ int main()
                     cout << "Do you want to play a new bet?" << endl;
                     cout << "yes/no: ";
                     cin  >> new_bet;
+
                     if(new_bet == "yes" || new_bet == "no")
                     {
                         break;
@@ -201,7 +208,9 @@ int main()
 
             else
             {
+
                 account = account - bet;
+
                 if(account >= 100)
                 {
                     while(1)
@@ -224,17 +233,22 @@ int main()
                     cout << "You are out of money!" << endl;
                     new_bet = "no";
                 }
+
             }
+
             if(new_bet == "no")
             {
                 break;
-            } 
+            }
+
         }
+
         while(1)
         {
             cout << "Do you want to play a new game?" << endl;
             cout << "yes/no: ";
             cin  >> new_game;
+
             if(new_bet == "yes" || new_bet == "no")
             {
                 break;
@@ -244,9 +258,12 @@ int main()
                 cout << "Not a correct input!" << endl;
             }
         }
+
         if(new_game == "no")
         {
             break;
         }
+
     }
+
 }
