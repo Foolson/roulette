@@ -249,7 +249,7 @@ int main()
             cout << "yes/no: ";
             cin  >> new_game;
 
-            if(new_bet == "yes" || new_bet == "no")
+            if(new_game == "yes" || new_game == "no")
             {
                 break;
             }
@@ -257,6 +257,7 @@ int main()
             {
                 cout << "Not a correct input!" << endl;
             }
+            
         }
 
         if(new_game == "no")
