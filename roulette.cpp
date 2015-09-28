@@ -121,7 +121,8 @@ int main()
                     cout << "Winning color: " << winning_color << endl;
                     cout << "You won!" << endl;
                     cout << "A total of " << price << "sek in price money has been moved to your account" << endl;
-
+                    
+                    //Defines that the player has won
                     won_bet = true;
                 }
                 else
@@ -129,7 +130,8 @@ int main()
                     //The winning color is declared for the player and that they have lost
                     cout << "Winning color: " << winning_color << endl;
                     cout << "You lost!" << endl;
-
+                    
+                    //Defines that the player has lost
                     won_bet = false;
                 }
 
@@ -171,7 +173,8 @@ int main()
                     cout << "Winning number: " << random_number << endl;
                     cout << "You Won!" << endl;
                     cout << "A total of " << price << "sek in price money has been moved to your account" << endl;
-
+                    
+                    //Defines that the player has won the bet
                     won_bet = true;
                 }
                 else
@@ -179,12 +182,14 @@ int main()
                     //The winning number is declared for the player and that they have lost
                     cout << "Winning number: " << random_number << endl;
                     cout << "You lost!" << endl;
-
+                    
+                    //Defines that the player has lost the bet
                     won_bet = false;
                 }
 
             }
-
+            
+            //This happends if the player has won
             if(won_bet == true)
             {
 
@@ -205,12 +210,15 @@ int main()
                 }
 
             }
-
+            
+            //This happends if the player has lost
             else
             {
-
+                
+                //Bet is moved from the account
                 account = account - bet;
-
+                
+                //If the player has enough money it has the choice to continue to play
                 if(account >= 100)
                 {
                     while(1)
@@ -228,6 +236,8 @@ int main()
                         }
                     }
                 }
+
+                //If the player is out of money they will not be able to play a new bet
                 else
                 {
                     cout << "You are out of money!" << endl;
@@ -235,14 +245,16 @@ int main()
                 }
 
             }
-
+            
+            //If the player dont want to place a new bet the loop will break and the code will continue
             if(new_bet == "no")
             {
                 break;
             }
 
         }
-
+        
+        //The player gets the question to play a new game
         while(1)
         {
             cout << "Do you want to play a new game?" << endl;
@@ -259,7 +271,8 @@ int main()
             }
             
         }
-
+        
+        //If the player dont want to play the loop breaks and the game shuts down
         if(new_game == "no")
         {
             break;
