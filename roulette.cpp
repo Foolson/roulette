@@ -36,10 +36,10 @@ int main()
         while(1)
         {
 
-            //Declaring the ammount on the account and that a new bet is starting
+            //Declaring the amount on the account and that a new bet is starting
             cout << "You have " << account << "sek in your account."  << endl;
             cout << "New bet!" << endl;
-            //Player gets to input a bet and only the correct ammount works
+            //Player gets to input a bet and only the correct amount works
 
             while(1) 
             {   
@@ -63,7 +63,7 @@ int main()
             }
             
             //Player choose between color or number. If they 
-            //dont do that it will loop until they do.
+            //don't do that it will loop until they do.
             while(1) 
             {
 
@@ -132,7 +132,6 @@ int main()
                     //Price money is calculated and the price money + bet money 
                     //is moved to the players account
                     price = bet * 2;
-                    price = price + bet;
                     account = account + price;
                     
                     //The winning color is declared for the player and that 
@@ -194,7 +193,6 @@ int main()
                     //Price money is calculated and price + bet money is transfered 
                     //to the players account
                     price = bet * 10;
-                    price = price + bet;
                     account = account + price;
                     
                     //The winning number is declared and the player and that
@@ -221,7 +219,7 @@ int main()
 
             }
             
-            //This happends if the player has won
+            //This happens if the player has won
             if(won_bet == true)
             {
 
@@ -245,14 +243,14 @@ int main()
 
             }
             
-            //This happends if the player has lost
+            //This happens if the player has lost
             else
             {
                 
                 //Bet is moved from the account
                 account = account - bet;
                 
-                //If the player has enough money it has the choice to continue to play
+                //If the player has enough money they have the choice to continue to play
                 if(account >= 100)
                 {
 
@@ -285,7 +283,7 @@ int main()
 
             }
             
-            //If the player dont want to place a new bet the loop will 
+            //If the player don't want to place a new bet the loop will 
             //break and the code will continue
             if(new_bet == "no")
             {
@@ -313,7 +311,7 @@ int main()
             
         }
         
-        //If the player dont want to play the loop breaks and the game shuts down
+        //If the player don't want to play the loop breaks and the game shuts down
         if(new_game == "no")
         {
             break;
