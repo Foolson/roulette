@@ -19,7 +19,7 @@ int main()
     bool   won_bet;
     string new_bet;
     string new_game;
-    string incinp = "Not a correct input!";
+    string ininp = "Not a correct input!";
 
     //Game starting in a while-loop to make it possible to restart the 
     //game from the end
@@ -57,7 +57,7 @@ int main()
                 }
                 else 
                 {
-                    cout << incinp << endl; 
+                    cout << ininp << endl; 
                 }
 
             }
@@ -78,7 +78,7 @@ int main()
                 }
                 else 
                 {
-                    cout << "Not a correct input!" << endl;
+                    cout << ininp << endl;
                 }
 
             }
@@ -104,7 +104,7 @@ int main()
 
                     else
                     {
-                        cout << "Not a correct input!" << endl;
+                        cout << ininp << endl;
                     }
 
                 }
@@ -177,7 +177,7 @@ int main()
                     }
                     else
                     {
-                        cout << "Not a correct input!" << endl;
+                        cout << ininp << endl;
                     }
 
                 }
@@ -238,7 +238,7 @@ int main()
                     }
                     else
                     {
-                        cout << "Not a correct input!" << endl;
+                        cout << ininp << endl;
                     }
 
                 }
@@ -269,7 +269,7 @@ int main()
                         }
                         else
                         {
-                            cout << "Not a correct input!" << endl;
+                            cout << ininp << endl;
                         }
 
                     }
@@ -308,7 +308,7 @@ int main()
             }
             else
             {
-                cout << "Not a correct input!" << endl;
+                cout << ininp << endl;
             }
             
         }
