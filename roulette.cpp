@@ -139,6 +139,7 @@ int main()
                     cout << "Winning color: " << winning_color << endl;
                     cout << "You won!" << endl;
                     cout << "A total of " << price << "sek in price money has been moved to your account" << endl;
+                    cout << "You now have " << account << "sek in your account."  << endl;
                     
                     //Defines that the player has won
                     won_bet = true;
@@ -200,6 +201,7 @@ int main()
                     cout << "Winning number: " << random_number << endl;
                     cout << "You Won!" << endl;
                     cout << "A total of " << price << "sek in price money has been moved to your account" << endl;
+                    cout << "You now have " << account << "sek in your account."  << endl;
                     
                     //Defines that the player has won the bet
                     won_bet = true;
