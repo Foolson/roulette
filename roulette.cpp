@@ -1,12 +1,10 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-
 using namespace std;
 
 int main() 
 {
-
     int    bank;
     int    account;
     int    bet;
@@ -20,29 +18,31 @@ int main()
     bool   won_bet;
     string new_bet;
     string new_game;
-    
+
     //Game starting in a while-loop to make it possible to restart the game from the end
     while(1)
-    { 
-        
+    {
+
         //Declaring that the game has started for the player and adding money to the account
         cout << "Welcome to a new game of Roulette!" << endl;
         account = 1000;
-        
+
         //The bet is also started in a while-loop so that bets can be restarted without needing the game to be restarted
         while(1)
         {
-            
+
             //Declaring the ammount on the account and that a new bet is starting
             cout << "You have " << account << "sek in your account."  << endl;
             cout << "New bet!" << endl;
-            
-            //Player gets to input a bet and only the correct ammount works    
+            //Player gets to input a bet and only the correct ammount works
+
             while(1) 
             {   
+
                 cout << "How much do you want to bet?" << endl;
                 cout << "100/300/500: ";
                 cin  >> bet;
+
                 if(bet==100 && bet<=account ||
                    bet==300 && bet<=account ||
                    bet==500 && bet<=account  ) 
@@ -54,14 +54,17 @@ int main()
                 {
                     cout << "Not a correct input!" << endl; 
                 }
+
             }
             
             //Player choose between color or number. If they dont do that it will loop until they do.
             while(1) 
             {
+
                 cout << "What do you want to bet on?" << endl;
                 cout << "color/number: ";
                 cin  >> color_number;
+
                 if(color_number=="color"  ||
                    color_number=="number"  ) 
                 {
@@ -82,23 +85,28 @@ int main()
                 //Player gets to pick color
                 while(1)
                 {   
+
                     cout << "Which color do you want to bet on?" << endl;
                     cout << "red/black: ";
                     cin  >> color;
+
                     if(color=="red"   ||
                        color=="black"  )
                     {
                         break;
                     }
+
                     else
                     {
                         cout << "Not a correct input!" << endl;
                     }
+
                 }
 
                 //A number between 1-36 i randomly generated
                 srand(time(NULL));
                 random_number = rand() % 36 + 1;
+
                 //To know if the players color is the winning color the code checks if the number is even or odd
                 if(random_number % 2 == 0)
                 {
@@ -112,6 +120,7 @@ int main()
                 //If the players color matches the winning color defined above the player will win
                 if(color==winning_color)
                 {   
+
                     //Price money is calculated and the price money + bet money is moved to the players account
                     price = bet * 2;
                     price = price + bet;
@@ -124,15 +133,18 @@ int main()
                     
                     //Defines that the player has won
                     won_bet = true;
+
                 }
                 else
                 {   
+
                     //The winning color is declared for the player and that they have lost
                     cout << "Winning color: " << winning_color << endl;
                     cout << "You lost!" << endl;
                     
                     //Defines that the player has lost
                     won_bet = false;
+
                 }
 
             }
@@ -144,9 +156,11 @@ int main()
                 //The player picks a number between 1-36
                 while(1)
                 {   
+
                     cout << "Which number do you want to bet on?" << endl;
                     cout << "1-36: ";
                     cin  >> number;
+
                     if(number >= 1 &&  number <= 36)
                     {
                         break;
@@ -155,6 +169,7 @@ int main()
                     {
                         cout << "Not a correct input!" << endl;
                     }
+
                 }
 
                 //A number between 1-36 is randomly generated
@@ -164,6 +179,7 @@ int main()
                 //If the random number is the same as the number the player picked they will win
                 if(random_number==number)
                 {   
+
                     //Price money is calculated and price + bet money is transfered to the players account
                     price = bet * 10;
                     price = price + bet;
@@ -176,15 +192,18 @@ int main()
                     
                     //Defines that the player has won the bet
                     won_bet = true;
+
                 }
                 else
                 {   
+
                     //The winning number is declared for the player and that they have lost
                     cout << "Winning number: " << random_number << endl;
                     cout << "You lost!" << endl;
                     
                     //Defines that the player has lost the bet
                     won_bet = false;
+
                 }
 
             }
@@ -195,6 +214,7 @@ int main()
 
                 while(1)
                 {
+
                     cout << "Do you want to play a new bet?" << endl;
                     cout << "yes/no: ";
                     cin  >> new_bet;
@@ -207,6 +227,7 @@ int main()
                     {
                         cout << "Not a correct input!" << endl;
                     }
+
                 }
 
             }
@@ -221,11 +242,14 @@ int main()
                 //If the player has enough money it has the choice to continue to play
                 if(account >= 100)
                 {
+
                     while(1)
                     {
+
                         cout << "Do you want to play a new bet?" << endl;
                         cout << "yes/no: ";
                         cin  >> new_bet;
+
                         if(new_bet == "yes" || new_bet == "no")
                         {
                             break;
@@ -234,7 +258,9 @@ int main()
                         {
                             cout << "Not a correct input!" << endl;
                         }
+
                     }
+
                 }
 
                 //If the player is out of money they will not be able to play a new bet
@@ -257,6 +283,7 @@ int main()
         //The player gets the question to play a new game
         while(1)
         {
+            
             cout << "Do you want to play a new game?" << endl;
             cout << "yes/no: ";
             cin  >> new_game;
