@@ -1,11 +1,12 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+
 using namespace std;
 
 int main() 
 {
-    int    bank;
+
     int    account;
     int    bet;
     string color_number;
@@ -18,16 +19,20 @@ int main()
     bool   won_bet;
     string new_bet;
     string new_game;
+    string incinp = "Not a correct input!";
 
-    //Game starting in a while-loop to make it possible to restart the game from the end
+    //Game starting in a while-loop to make it possible to restart the 
+    //game from the end
     while(1)
     {
 
-        //Declaring that the game has started for the player and adding money to the account
+        //Declaring that the game has started for the player and adding 
+        //money to the account
         cout << "Welcome to a new game of Roulette!" << endl;
         account = 1000;
 
-        //The bet is also started in a while-loop so that bets can be restarted without needing the game to be restarted
+        //The bet is also started in a while-loop so that 
+        //bets can be restarted without needing the game to be restarted
         while(1)
         {
 
@@ -52,12 +57,13 @@ int main()
                 }
                 else 
                 {
-                    cout << "Not a correct input!" << endl; 
+                    cout << incinp << endl; 
                 }
 
             }
             
-            //Player choose between color or number. If they dont do that it will loop until they do.
+            //Player choose between color or number. If they 
+            //dont do that it will loop until they do.
             while(1) 
             {
 
@@ -107,7 +113,8 @@ int main()
                 srand(time(NULL));
                 random_number = rand() % 36 + 1;
 
-                //To know if the players color is the winning color the code checks if the number is even or odd
+                //To know if the players color is the winning color the code 
+                //checks if the number is even or odd
                 if(random_number % 2 == 0)
                 {
                     winning_color="black";
@@ -117,16 +124,19 @@ int main()
                     winning_color="red";
                 }
                 
-                //If the players color matches the winning color defined above the player will win
+                //If the players color matches the winning color defined above 
+                //the player will win
                 if(color==winning_color)
                 {   
 
-                    //Price money is calculated and the price money + bet money is moved to the players account
+                    //Price money is calculated and the price money + bet money 
+                    //is moved to the players account
                     price = bet * 2;
                     price = price + bet;
                     account = account + price;
                     
-                    //The winning color is declared for the player and that they won, they also get to know how much they have won
+                    //The winning color is declared for the player and that 
+                    //they won, they also get to know how much they have won
                     cout << "Winning color: " << winning_color << endl;
                     cout << "You won!" << endl;
                     cout << "A total of " << price << "sek in price money has been moved to your account" << endl;
@@ -176,16 +186,19 @@ int main()
                 srand(time(NULL));
                 random_number = rand() % 36 + 1;
 
-                //If the random number is the same as the number the player picked they will win
+                //If the random number is the same as the number the player 
+                //picked they will win
                 if(random_number==number)
                 {   
 
-                    //Price money is calculated and price + bet money is transfered to the players account
+                    //Price money is calculated and price + bet money is transfered 
+                    //to the players account
                     price = bet * 10;
                     price = price + bet;
                     account = account + price;
                     
-                    //The winning number is declared and the player and that tey won, they also get to know how much they have won
+                    //The winning number is declared and the player and that
+                    //they won, they also get to know how much they have won
                     cout << "Winning number: " << random_number << endl;
                     cout << "You Won!" << endl;
                     cout << "A total of " << price << "sek in price money has been moved to your account" << endl;
@@ -272,7 +285,8 @@ int main()
 
             }
             
-            //If the player dont want to place a new bet the loop will break and the code will continue
+            //If the player dont want to place a new bet the loop will 
+            //break and the code will continue
             if(new_bet == "no")
             {
                 break;
@@ -283,7 +297,7 @@ int main()
         //The player gets the question to play a new game
         while(1)
         {
-            
+
             cout << "Do you want to play a new game?" << endl;
             cout << "yes/no: ";
             cin  >> new_game;
