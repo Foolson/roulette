@@ -47,6 +47,8 @@ int main()
                 cout << "How much do you want to bet?" << endl;
                 cout << "100/300/500: ";
                 cin  >> bet;
+                cin.clear();
+                cin.ignore(5000, '\n');
 
                 if(bet==100 && bet<=account ||
                    bet==300 && bet<=account ||
@@ -170,6 +172,8 @@ int main()
                     cout << "Which number do you want to bet on?" << endl;
                     cout << "1-36: ";
                     cin  >> number;
+                    cin.clear();
+                    cin.ignore(5000, '\n');
 
                     if(number >= 1 &&  number <= 36)
                     {
